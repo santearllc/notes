@@ -13,6 +13,9 @@ import {
   Typography,
 } from '@mui/material';
 
+// Additional Styles
+import './App.css';
+
 function App() {
   const searchRef = useRef(null);
   const titleRef = useRef(null);
@@ -31,6 +34,7 @@ function App() {
 
   const searchNotes = (event) => {
     const phrase = event.target.value.toLowerCase();
+
     const results = notes.filter((n) =>
       `${n.title}${n.body}`.toLowerCase().includes(phrase)
     );
